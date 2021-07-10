@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel=stylesheet href="armstyle.css"/>
+</head>
+<body>
+<div class="sliders">
+  <h2 class="title">Robot Arm angles Contorl Panel</h2>
+<form method="POST" action="saveAngles.php">
+   <div class="sliderContainer">
+    <label>Motor 01</label>
+    <input type="range" value="90" min="0" max="180" id="slider1" name="m1" class="slider">
+    <span class="output" id="output1"></span>
+   </div>
+   
+   <div class="sliderContainer">
+         <label>Motor 02</label>
+
+    <input type="range" value="0" min="0" max="180" id="slider2" name="m2" class="slider">
+    <span class="output" id="output2"></span>
+   </div>
+   
+   <div class="sliderContainer">
+         <label>Motor 03</label>
+
+    <input type="range" value="0" min="0" max="180" id="slider3" name="m3" class="slider">
+    <span class="output" id="output3"></span>
+   </div>
+
+   <div class="sliderContainer">
+         <label>Motor 04</label>
+
+    <input type="range" value="0" min="0" max="180" id="slider4" name="m4" class="slider">
+    <span class="output" id="output4"></span>
+   </div>
+   
+   <div class="sliderContainer">
+         <label>Motor 05</label>
+
+    <input type="range" value="0" min="0" max="180" id="slider5" name="m5" class="slider">
+    <span class="output" id="output5"></span>
+   </div>
+
+   <div class="sliderContainer">
+         <label>Motor 06</label>
+
+    <input type="range" value="0" min="0" max="180" id="slider6" name="m6" class="slider">
+    <span class="output" id="output6"></span>
+   </div>
+    
+  <button class="button" type="submit">Save</button>
+</form>
+  <form id="ON" method="POST" action="displayAngles.php">
+  </form>
+  <button id="on-btn"class="button" type="submit">Motors/ON</button>
+
+</div>
+<div class="movement-con">
+  <div class="movement">
+    <form action="move.php" method="post">
+      <button value="L" name="L">Left</button>
+      <button value="R" name="R">Right</button>
+      <button value="U" name="U">Up</button>
+      <button value="D" name="D">Down</button>
+      <button value="S" name="S">Stop</button>
+    
+    </form>
+  </div>
+</div>
+
+  
+
+<script type="text/javascript" src="arm.js"></script>
+<script>
+  var form = document.getElementById("ON");
+  document.getElementById("on-btn").addEventListener("click", function () {
+  form.submit();
+  });
+</script>
+</body>
+</html>

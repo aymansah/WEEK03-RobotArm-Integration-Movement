@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+
+
+body {
+ background-color: #424242;
+ margin: 0;
+ align-items: center;
+ justify-content: center;
+ height: 100vh;
+ user-select: none;
+}
+h1, label{
+  color: #d3d3d3;
+
+}
+.sliders {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+    
+}
+.sliderContainer {
+ width: 25em;
+ text-align: center;
+ margin-bottom: 15px;
+ border: 5px solid red;
+}
+.movement{
+ 
+  align-items: center;
+ justify-content: center;
+  /* flex-direction: column; */
+}
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 13px;
+  width: 100%;
+  border-radius: 10em;
+  background-color: #c6b300;
+  outline: none;
+  margin-bottom: 14px;
+  
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 40%;
+  background: #424242;
+  cursor: pointer;
+  border: 2px solid #cf7575;
+}
+
+
+.output {
+ color: #d3d3d3;
+ font-family: Lato, sans-serif;
+ letter-spacing: 1.5px;
+ font-size: 20px;
+ margin-left: 5px;
+}
